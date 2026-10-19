@@ -921,11 +921,7 @@ footer small {
         padding: 0 22px
     }
 
-    .brand img {
-        width: 192px;
-        height: 40px;
-    }
-
+ 
     .menu-button {
         display: flex;
         width: 42px;
@@ -1173,4 +1169,65 @@ footer img {
 :root {
     --display: 'Acid Grotesk', Arial, sans-serif;
     --mono: 'Acid Grotesk', Arial, sans-serif;
+}
+
+/* Mobile: mantém os controlos nas extremidades e evita que o cartão decorativo
+   se sobreponha ao conteúdo principal do hero. */
+@media (max-width: 800px) {
+    .site-header {
+        width: 100%;
+        justify-content: space-between;
+        padding-inline: 20px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        width: 98px;
+        height: 100%;
+        overflow: visible;
+    }
+
+    .brand img {
+        width: 250px;
+        height: 90px;
+        max-width: none;
+        transform: translateX(-38px);
+    }
+
+    .menu-button {
+        flex: 0 0 42px;
+        margin-left: auto;
+    }
+
+    .hero {
+        min-height: 670px;
+        padding: 118px 20px 56px;
+    }
+
+    .hero-copy {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 320px;
+        font-size: clamp(38px, 11vw, 44px);
+        line-height: .97;
+        margin: 8px 0 24px;
+    }
+
+    .hero-text {
+        max-width: 290px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .button-row {
+        margin-top: 32px;
+    }
+
+    .hero-object,
+    .hero-foot {
+        display: none;
+    }
 }
