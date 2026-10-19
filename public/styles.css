@@ -284,7 +284,8 @@ h2 em {
     display: grid;
     grid-template-columns: 1.55fr .7fr;
     gap: 9vw;
-    margin-top: 65px
+    min-height: 45vh;
+    margin-top: 85px
 }
 
 .section h2,
@@ -313,7 +314,7 @@ h2 em {
 }
 
 .intro-body .text-link {
-    margin-top: 16px;
+    margin-top: 26px;
     color: var(--ink)
 }
 
