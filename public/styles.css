@@ -1230,4 +1230,46 @@ footer img {
     .hero-foot {
         display: none;
     }
+
+    footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 24px 22px;
+        text-align: center;
+    }
+
+    footer img {
+        justify-self: center;
+    }
+
+    footer p {
+        margin-inline: auto;
+    }
+
+    footer div {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        row-gap: 16px;
+    }
+
+    .footer-social {
+        flex: 0 0 100%;
+        width: 100%;
+        margin: 4px 0 0;
+        padding: 0;
+    }
+
+    .footer-social p {
+        margin: 0;
+        max-width: none;
+    }
+
+    footer small {
+        width: 100%;
+        padding-top: 18px;
+        text-align: center;
+    }
 }
