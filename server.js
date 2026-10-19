@@ -9,6 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static(path.join(__dirname, 'docs')));
+app.use('/fonts', express.static(path.join(__dirname, 'font')));
 
 app.post('/api/contact', (request, response) => {
   const { name, company, contact, service, project } = request.body ?? {};

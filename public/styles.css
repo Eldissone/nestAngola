@@ -42,7 +42,7 @@ body {
 }
 
 .site-header {
-    height: 90px;
+    height: 80px;
     position: absolute;
     z-index: 10;
     inset: 0 0 auto;
@@ -56,8 +56,8 @@ body {
 
 .brand img {
     display: block;
-    width: 128px;
-    height: 48px;
+    width: 250px;
+    height: 80px;
     object-fit: cover;
     object-position: center;
     filter: brightness(0) invert(1)
@@ -118,35 +118,9 @@ body {
     inset: 0;
     background: linear-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .06) 1px, transparent 1px);
     background-size: 68px 68px;
-    mask-image: linear-gradient(to bottom, black, transparent 80%)
+    mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
-.orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(1px);
-    mix-blend-mode: screen
-}
-
-.orb-one {
-    background: #0a6762;
-    width: 50vw;
-    height: 50vw;
-    right: -13vw;
-    top: -12vw;
-    opacity: .65;
-    animation: float 12s ease-in-out infinite
-}
-
-.orb-two {
-    width: 26vw;
-    height: 26vw;
-    left: 32vw;
-    bottom: -18vw;
-    background: var(--lime);
-    opacity: .14;
-    filter: blur(45px)
-}
 
 .hero-copy {
     position: relative;
@@ -154,24 +128,12 @@ body {
     z-index: 2
 }
 
-.eyebrow,
+
 .section-label {
-    font: 500 10px var(--mono);
+    font: 500 16px var(--mono);
     letter-spacing: .14em
 }
 
-.eyebrow {
-    color: var(--lime);
-    display: flex;
-    gap: 9px;
-    align-items: center
-}
-
-.eyebrow span {
-    width: 20px;
-    height: 1px;
-    background: currentColor
-}
 
 .hero h1 {
     font-size: clamp(42px, 5.6vw, 82px);
@@ -260,63 +222,31 @@ h2 em {
 }
 
 .n-mark {
-    font-size: clamp(180px, 24vw, 350px);
-    font-weight: 800;
-    letter-spacing: -.18em;
-    color: var(--lime);
-    line-height: .7;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 340px;
+    right: -120px;
     transform: skewY(-3deg);
-    text-shadow: 0 0 80px rgba(167, 251, 49, .18)
+    background-color: var(--white);
+    border-radius: 25px;
 }
 
-.n-mark span {
-    font-size: .22em
-}
 
 .hero-object p {
-    position: absolute;
-    right: 4%;
-    bottom: 21%;
     text-transform: uppercase;
-    font: 500 clamp(8px, 1vw, 12px) var(--mono);
+    font: 500 clamp(18px, 5vw, 32px) var(--mono);
     line-height: 1.8;
-    color: #bbccc8;
+    color: var(--ink);
     letter-spacing: .07em
 }
 
 .hero-object p b {
     color: var(--lime);
     font-weight: 500
-}
-
-.orbit {
-    position: absolute;
-    border: 1px solid rgba(167, 251, 49, .45);
-    border-radius: 50%
-}
-
-.orbit-a {
-    width: 100%;
-    height: 45%;
-    transform: rotate(-24deg)
-}
-
-.orbit-b {
-    height: 100%;
-    width: 45%;
-    transform: rotate(29deg)
-}
-
-.orbit-dot {
-    position: absolute;
-    background: var(--lime);
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    top: 12%;
-    left: 24%;
-    box-shadow: 0 0 0 9px rgba(167, 251, 49, .12);
-    animation: pulse 2.5s infinite
 }
 
 .hero-foot {
@@ -326,7 +256,7 @@ h2 em {
     right: clamp(24px, 5vw, 78px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     font: 500 9px var(--mono);
     letter-spacing: .1em;
     color: #c7d4d1
@@ -361,6 +291,7 @@ h2 em {
 .contact h2 {
     font-size: clamp(33px, 4.6vw, 66px);
     letter-spacing: -.06em;
+    word-spacing: 10px;
     line-height: 1.08;
     margin: 0;
     font-weight: 700
@@ -398,9 +329,12 @@ h2 em {
     align-items: start
 }
 
-.services .section-label,
-.process .section-label {
+.services .section-label {
     color: var(--lime)
+}
+
+.process .section-label {
+    color: var(--ink)
 }
 
 .service-list {
@@ -441,7 +375,7 @@ h2 em {
     margin: 3px 0;
     color: #b6c8c5;
     line-height: 1.6;
-    font-size: 13px;
+    font-size: 15px;
     max-width: 330px
 }
 
@@ -459,12 +393,12 @@ h2 em {
 }
 
 .process:after {
-    content: 'N';
+    content: 'Nest';
     position: absolute;
-    right: -5vw;
+    left: 0;
     bottom: -17vw;
     font-weight: 800;
-    font-size: 54vw;
+    font-size: 44vw;
     color: rgba(4, 59, 60, .08);
     line-height: 1
 }
@@ -481,7 +415,7 @@ h2 em {
 }
 
 .process h2 em {
-    color: var(--ink-2);
+    color: var(--white);
     opacity: .7
 }
 
@@ -531,20 +465,22 @@ h2 em {
 }
 
 .reason-visual {
-    height: 490px;
+    height: 500px;
     background: var(--ink);
     position: relative;
     overflow: hidden;
     display: grid;
+    border-radius: 25px;
     place-items: center
 }
 
 .reason-visual img {
     position: relative;
     z-index: 1;
-    width: 260%;
+    width: 160%;
     max-width: none;
     height: 100%;
+    margin-right: -60px;
     object-fit: cover;
     object-position: center;
     filter: brightness(0) invert(1)
@@ -608,7 +544,7 @@ h2 em {
 .projects-header>p {
     max-width: 330px;
     color: #57706c;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8
 }
 
@@ -844,7 +780,8 @@ h2 em {
 
 .contact-form .button {
     justify-self: start;
-    margin-top: 4px
+    margin-top: 4px;
+    max-height: 50px;
 }
 
 .form-status {
@@ -865,8 +802,8 @@ footer {
 }
 
 footer img {
-    width: 135px;
-    height: 47px;
+    width: 250px;
+    height: 70px;
     object-fit: cover;
     filter: brightness(0) invert(1)
 }
@@ -896,6 +833,33 @@ footer small {
     padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, .15);
     color: #86a3a0
+}
+
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--bg);
+  transition: var(--transition);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-social a:hover {
+  opacity: 0.9;
 }
 
 .reveal {
@@ -958,8 +922,8 @@ footer small {
     }
 
     .brand img {
-        width: 112px;
-        height: 40px
+        width: 192px;
+        height: 40px;
     }
 
     .menu-button {
@@ -1196,4 +1160,17 @@ footer small {
 .reason-visual img,
 footer img {
     filter: none
+}
+
+@font-face {
+    font-family: 'Acid Grotesk';
+    src: url('/fonts/Acid%20Grotesk%20TRIAL/TRIAL%20TTF%20%28Variable%20format%29/FFFAcidGroteskVariableTRIALVF.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    --display: 'Acid Grotesk', Arial, sans-serif;
+    --mono: 'Acid Grotesk', Arial, sans-serif;
 }
