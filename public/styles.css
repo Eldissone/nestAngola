@@ -1207,23 +1207,44 @@ footer img {
 
     .hero-copy {
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .hero h1 {
         max-width: 320px;
         font-size: clamp(38px, 11vw, 44px);
         line-height: .97;
-        margin: 8px 0 24px;
+        margin: 8px auto 24px;
     }
 
     .hero-text {
         max-width: 290px;
         font-size: 15px;
         line-height: 1.5;
+        margin-inline: auto;
     }
 
     .button-row {
         margin-top: 32px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .button-row .button-primary {
+        padding: 15px 16px;
+        gap: 14px;
+        white-space: nowrap;
+    }
+
+    .button-row .text-link {
+        flex: 0 0 auto;
+        white-space: nowrap;
     }
 
     .hero-object,
