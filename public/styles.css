@@ -1012,6 +1012,7 @@ footer small {
     }
 
     .section {
+        min-height: 100vh;
         padding: 85px 24px
     }
 
