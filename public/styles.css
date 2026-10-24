@@ -939,8 +939,7 @@ footer small {
     }
 
     .hero {
-        min-height: 720px;
-        height: auto;
+        height: 80vh;
         padding: 137px 24px 80px
     }
 
@@ -1165,7 +1164,6 @@ footer img {
     }
 
     .hero {
-        min-height: 670px;
         padding: 118px 20px 56px;
     }
 
