@@ -572,74 +572,23 @@ h2 em {
 .project-art {
     height: 380px;
     position: relative;
-    overflow: hidden
-}
-
-.project-a .project-art {
+    overflow: hidden;
+    border-radius: 18px;
     background: var(--ink);
-    display: grid;
-    place-items: center
+    box-shadow: 0 14px 35px rgba(1, 55, 55, 0.08);
 }
 
-.project-a .project-art>span {
-    color: var(--lime);
-    font-size: clamp(70px, 12vw, 160px);
-    font-weight: 800;
-    letter-spacing: -.12em;
-    z-index: 1
-}
-
-.project-a .project-art i {
-    position: absolute;
-    width: 115%;
-    height: 1px;
-    background: rgba(167, 251, 49, .35);
-    transform: rotate(-27deg)
-}
-
-.project-a .project-art i:first-of-type {
-    transform: rotate(50deg)
-}
-
-.project-b .project-art {
-    background: #c8e2ad;
-    padding: 27px
-}
-
-.project-b .project-art>span {
-    font: 500 11px var(--mono);
-    color: var(--ink)
-}
-
-.project-ui {
-    height: 250px;
-    background: #f6f9ef;
-    position: absolute;
-    left: 9%;
-    right: 9%;
-    bottom: 0;
-    border-radius: 10px 10px 0 0;
-    padding: 28px;
-    box-shadow: 0 -10px 30px rgba(4, 59, 60, .12)
-}
-
-.project-ui i {
-    display: block;
-    height: 15px;
-    background: #c6dfae;
-    margin-bottom: 15px;
-    border-radius: 2px
-}
-
-.project-ui i:nth-child(2) {
-    width: 78%;
-    background: var(--ink)
-}
-
-.project-ui i:nth-child(3) {
-    height: 74px;
+.project-img {
     width: 100%;
-    background: var(--lime)
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.project:hover .project-img {
+    transform: scale(1.04);
 }
 
 .project-meta {
