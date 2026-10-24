@@ -107,7 +107,14 @@ body {
     height: 100vh;
     max-height: 980px;
     position: relative;
-    background: var(--ink);
+    background-color: var(--ink);
+    background-image: 
+        radial-gradient(circle at 85% 30%, rgba(168, 241, 68, 0.08), transparent 45%),
+        linear-gradient(90deg, rgba(1, 55, 55, 0.94) 0%, rgba(1, 55, 55, 0.78) 45%, rgba(1, 55, 55, 0.45) 100%),
+        url('/assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
     overflow: hidden;
     color: white;
     padding: clamp(140px, 20vh, 220px) clamp(24px, 9vw, 145px) 75px
@@ -124,7 +131,12 @@ body {
 
 .hero-copy {
     position: relative;
-    max-width: 760px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 25%;
     z-index: 2
 }
 
@@ -140,7 +152,8 @@ body {
     line-height: 1.04;
     letter-spacing: -.06em;
     margin: 21px 0 24px;
-    max-width: 740px
+    text-align: center;
+    max-width: 100%
 }
 
 .hero h1 em,
