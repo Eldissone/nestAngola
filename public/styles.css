@@ -480,24 +480,52 @@ h2 em {
 
 .reason-visual {
     height: 500px;
-    background: var(--ink);
     position: relative;
-    overflow: hidden;
-    display: grid;
-    border-radius: 25px;
-    place-items: center
+    overflow: visible;
 }
 
-.reason-visual img {
+.reason-card {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(12, 211, 128, 0.15), transparent 70%), var(--ink);
+    border-radius: 25px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 20px 45px rgba(1, 55, 55, 0.15);
+}
+
+.reason-bg-logo {
     position: relative;
     z-index: 1;
-    width: 160%;
+    width: 150%;
     max-width: none;
     height: 100%;
-    margin-right: -60px;
+    margin-right: -40px;
     object-fit: cover;
     object-position: center;
-    filter: brightness(0) invert(1)
+    opacity: 0.14;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.reason-person {
+    position: absolute;
+    bottom: 0;
+    left: -2%;
+    width: 125%;
+    max-width: none;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom left;
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.38));
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reason-visual:hover .reason-person {
+    transform: translateY(-4px) scale(1.02);
 }
 
 .pulse {
@@ -1013,7 +1041,18 @@ footer small {
 
     .reason-visual {
         height: 310px;
-        order: 2
+        order: 2;
+        overflow: hidden;
+    }
+
+    .reason-person {
+        display: none;
+    }
+
+    .reason-bg-logo {
+        opacity: 1;
+        width: 160%;
+        margin-right: -60px;
     }
 
     .reason-content {
