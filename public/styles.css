@@ -72,7 +72,7 @@ body {
 .navigation a {
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: .02em
 }
@@ -87,6 +87,8 @@ body {
 }
 
 .nav-cta {
+    background: var(--white);
+    color: var(--ink) !important;
     border: 1px solid rgba(255, 255, 255, .55);
     border-radius: 99px;
     padding: 12px 17px;
@@ -108,7 +110,7 @@ body {
     max-height: 980px;
     position: relative;
     background-color: var(--ink);
-    background-image: 
+    background-image:
         radial-gradient(circle at 85% 30%, rgba(168, 241, 68, 0.08), transparent 45%),
         linear-gradient(90deg, rgba(1, 55, 55, 0.94) 0%, rgba(1, 55, 55, 0.78) 45%, rgba(1, 55, 55, 0.45) 100%),
         url('/assets/hero-bg.jpg');
@@ -140,7 +142,6 @@ body {
     z-index: 2
 }
 
-
 .section-label {
     font: 500 16px var(--mono);
     letter-spacing: .14em
@@ -164,8 +165,8 @@ h2 em {
 }
 
 .hero-text {
-    max-width: 475px;
-    font-size: 16px;
+    max-width: 505px;
+    font-size: 18px;
     line-height: 1.7;
     color: #d3e0dd
 }
@@ -185,7 +186,7 @@ h2 em {
     gap: 24px;
     text-decoration: none;
     cursor: pointer;
-    font: 700 12px var(--display);
+    font: 700 15px var(--display);
     letter-spacing: .01em;
     transition: transform .25s, box-shadow .25s
 }
@@ -204,7 +205,7 @@ h2 em {
 }
 
 .button span {
-    font-size: 17px
+    font-size: 19px
 }
 
 .text-link {
@@ -212,7 +213,7 @@ h2 em {
     align-items: center;
     gap: 10px;
     color: inherit;
-    font: 700 12px var(--display);
+    font: 700 15px var(--display);
     text-decoration: none;
     border-bottom: 1px solid currentColor;
     padding-bottom: 6px;
@@ -270,14 +271,14 @@ h2 em {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font: 500 9px var(--mono);
+    font: 500 12px var(--mono);
     letter-spacing: .1em;
     color: #c7d4d1
 }
 
 .hero-foot a {
     color: var(--lime);
-    font-size: 21px;
+    font-size: 22px;
     text-decoration: none
 }
 
@@ -316,7 +317,7 @@ h2 em {
 }
 
 .intro-body {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.8;
     color: #3e5955;
     padding-top: 6px
@@ -373,7 +374,7 @@ h2 em {
 }
 
 .service-card>span {
-    font: 400 10px var(--mono);
+    font: 400 25px var(--mono);
     color: var(--lime);
     padding-top: 6px
 }
@@ -396,7 +397,7 @@ h2 em {
 .service-card a {
     color: var(--lime);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 35px;
     justify-self: end
 }
 
@@ -454,7 +455,7 @@ h2 em {
 }
 
 .step b {
-    font: 500 10px var(--mono)
+    font: 500 15px var(--mono)
 }
 
 .step h3 {
@@ -464,7 +465,7 @@ h2 em {
 }
 
 .step p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.65;
     margin: 0;
     max-width: 190px
@@ -558,12 +559,12 @@ h2 em {
 }
 
 .reason-grid b {
-    font-size: 14px
+    font-size: 15px
 }
 
 .reason-grid p {
     color: #57706c;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.7;
     margin: 10px 0 0
 }
@@ -628,7 +629,7 @@ h2 em {
 }
 
 .project-meta span {
-    font: 500 9px var(--mono);
+    font: 500 13px var(--mono);
     letter-spacing: .09em;
     color: #758b87
 }
@@ -639,7 +640,7 @@ h2 em {
 }
 
 .project-meta a {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--ink);
     margin-left: auto
@@ -688,7 +689,7 @@ h2 em {
 
 .contact-copy>p {
     max-width: 460px;
-    font-size: 14px;
+    font-size: 15px;
     color: #bed0cd;
     line-height: 1.8;
     margin: 24px 0 35px
@@ -696,7 +697,7 @@ h2 em {
 
 .email-link {
     color: var(--lime);
-    font-size: clamp(17px, 2vw, 26px);
+    font-size: clamp(15px, 2vw, 24px);
     font-weight: 600;
     letter-spacing: -.04em;
     text-decoration: none;
@@ -717,7 +718,7 @@ h2 em {
 
 .contact-form label {
     display: block;
-    font: 500 9px var(--mono);
+    font: 500 14px var(--mono);
     letter-spacing: .1em;
     color: var(--lime)
 }
@@ -741,7 +742,7 @@ h2 em {
     border-radius: 0;
     color: white;
     padding: 12px 0 11px;
-    font: 400 13px var(--display);
+    font: 400 15px var(--display);
     transition: border .2s
 }
 
@@ -777,7 +778,7 @@ h2 em {
 
 .form-status {
     margin: 0;
-    font-size: 12px;
+    font-size: 15px;
     color: var(--lime);
     min-height: 17px
 }
@@ -800,10 +801,10 @@ footer img {
 }
 
 footer p {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.7;
     margin: 0;
-    max-width: 250px
+    max-width: 300px
 }
 
 footer div {
@@ -816,7 +817,7 @@ footer a,
 footer small {
     color: #d7e3e0;
     text-decoration: none;
-    font-size: 10px
+    font-size: 12px
 }
 
 footer small {
@@ -828,29 +829,29 @@ footer small {
 
 
 .footer-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
 }
 
 .footer-social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--bg);
-  transition: var(--transition);
-  text-decoration: none;
-  font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--bg);
+    transition: var(--transition);
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .footer-social a:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 .reveal {
@@ -912,7 +913,7 @@ footer small {
         padding: 0 22px
     }
 
- 
+
     .menu-button {
         display: flex;
         width: 42px;
@@ -1243,6 +1244,13 @@ footer img {
         white-space: nowrap;
     }
 
+    .button,
+    .text-link {
+
+        font: 700 13px var(--display);
+
+    }
+
     .button-row .text-link {
         flex: 0 0 auto;
         white-space: nowrap;
@@ -1260,6 +1268,7 @@ footer img {
         gap: 20px;
         padding: 40px 24px 22px;
         text-align: center;
+        min-height: 60vh;
     }
 
     footer img {
