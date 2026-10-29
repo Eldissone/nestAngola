@@ -11,8 +11,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <link rel="stylesheet" href="styles.css?v=1.3" />
+  <link rel="stylesheet" href="styles.css?v=1.4" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Widget do selo do Calendly - início -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Widget do selo do Calendly - fim -->
 
 </head>
 
@@ -220,8 +223,11 @@
             <option>Design & Experiências</option>
             <option>Outro</option>
           </select></label><label>Sobre o projecto<textarea name="project" required
-            placeholder="Conte-nos um pouco sobre o desafio."></textarea></label><button class="button button-primary"
-          type="submit">Enviar pedido <span>↗</span></button>
+            placeholder="Conte-nos um pouco sobre o desafio."></textarea></label>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Enviar pedido <span>↗</span></button>
+          <a class="button button-secondary button-calendly" href="https://calendly.com/nestangola/30min" onclick="if(window.Calendly){Calendly.initPopupWidget({url: 'https://calendly.com/nestangola/30min'});return false;}" target="_blank" rel="noopener noreferrer">Agendar Consultoria <span>↗</span></a>
+        </div>
         <p class="form-status" aria-live="polite" data-form-status></p>
       </form>
     </section>
@@ -251,6 +257,21 @@
       reservados.</small>
   </footer>
   <script src="script.js"></script>
+
+  <!-- Widget do selo do Calendly - início -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async onload="initCalendlyBadge()"></script>
+  <script type="text/javascript">
+    function initCalendlyBadge() {
+      if (window.Calendly && !window.__calendlyInitialized) {
+        window.__calendlyInitialized = true;
+        Calendly.initBadgeWidget({ url: 'https://calendly.com/nestangola', text: 'Agendar Consultoria', color: '#a8f144', textColor: '#ffffff', branding: false });
+      }
+    }
+    window.onload = function() {
+      initCalendlyBadge();
+    };
+  </script>
+  <!-- Widget do selo do Calendly - fim -->
 </body>
 
 </html>

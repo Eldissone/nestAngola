@@ -31,9 +31,11 @@ const form = document.querySelector('[data-contact-form]');
 const status = document.querySelector('[data-form-status]');
 form?.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const button = form.querySelector('button');
-  button.disabled = true;
-  button.textContent = 'A enviar…';
+  const button = form.querySelector('button[type="submit"]');
+  if (button) {
+    button.disabled = true;
+    button.textContent = 'A enviar…';
+  }
   status.textContent = '';
   try {
     const result = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
